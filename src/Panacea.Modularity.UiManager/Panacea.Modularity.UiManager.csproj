@@ -31,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Panacea.Core, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Panacea.Core.0.0.1\lib\net462\Panacea.Core.dll</HintPath>
+    <Reference Include="Panacea.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Panacea.Core.1.0.0\lib\net462\Panacea.Core.dll</HintPath>
     </Reference>
     <Reference Include="Panacea.Modularity, Version=0.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Panacea.Modularity.0.0.2\lib\net462\Panacea.Modularity.dll</HintPath>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeforeNavigateEventArgs.cs" />
-    <Compile Include="Extensions\IPluginLoaderExtensions.cs" />
+    <Compile Include="Extensions\PanaceaServicesExtensions.cs" />
     <Compile Include="IPopup.cs" />
     <Compile Include="IUiManagerPlugin.cs" />
     <Compile Include="KeyboardTypes.cs" />
