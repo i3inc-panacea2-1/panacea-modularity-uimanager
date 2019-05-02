@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Panacea.Modularity.UiManager
 {
-    public interface IUiManagerPlugin : IPlugin, IUiManagerProvider
+    public interface IKeyboardHandler
     {
-        
+        void ShowKeyboard(KeyboardTypes keyboardType = KeyboardTypes.Normal);
+
+        void HideKeyboard();
     }
 }

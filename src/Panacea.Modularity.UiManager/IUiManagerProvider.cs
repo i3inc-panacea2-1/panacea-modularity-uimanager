@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Panacea.Modularity.UiManager
 {
-    public interface IUiManagerPlugin : IPlugin, IUiManagerProvider
+    public interface IUiManagerProvider
     {
-        
+        IUiManager GetUiManager();
     }
 }
