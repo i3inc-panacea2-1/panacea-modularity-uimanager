@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BeforeNavigateEventArgs.cs" />
     <Compile Include="Extensions\PanaceaServicesExtensions.cs" />
+    <Compile Include="ICallablePlugin.cs" />
     <Compile Include="IPopup.cs" />
     <Compile Include="IUiManagerPlugin.cs" />
     <Compile Include="KeyboardTypes.cs" />
