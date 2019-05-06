@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace Panacea.Modularity.UiManager
 {
-    public class UiManagerBase:ContentControl
+    public class UiManagerBase:ContentControl, INavigator
     {
         readonly List<string> _navigationHistory = new List<string>();
 
@@ -26,7 +26,9 @@ namespace Panacea.Modularity.UiManager
 
         private static void OnCurrentPageChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-
+            var c = d as UiManagerBase;
+            if (c == null) return;
+            c.Content = c.CurrentPage;
         }
 
         public event EventHandler<BeforeNavigateEventArgs> Back;
@@ -37,12 +39,15 @@ namespace Panacea.Modularity.UiManager
         }
 
         public event EventHandler AfterNavigate;
+        public event EventHandler<BeforeNavigateEventArgs> BeforeNavigate;
 
         public IReadOnlyList<FrameworkElement> History => _history.AsReadOnly();
 
         protected List<FrameworkElement> _history = new List<FrameworkElement>();
 
         public virtual bool IsNavigationDisabled { get; set; }
+
+        public bool IsHomeTheCurrentPage => throw new NotImplementedException();
 
         public virtual void Dispose()
         {
@@ -67,6 +72,9 @@ namespace Panacea.Modularity.UiManager
         public virtual void Navigate(FrameworkElement page, bool cache = true)
         {
             if (page == null) return;
+            var args = new BeforeNavigateEventArgs();
+            BeforeNavigate?.Invoke(this, args);
+            if (args.Cancel) return;
             if (cache) _history.Add(page);
             CurrentPage = page;
             if (_navigationHistory.Count > 200)
