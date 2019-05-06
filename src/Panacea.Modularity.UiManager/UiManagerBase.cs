@@ -47,7 +47,7 @@ namespace Panacea.Modularity.UiManager
 
         public virtual bool IsNavigationDisabled { get; set; }
 
-        public bool IsHomeTheCurrentPage => throw new NotImplementedException();
+        public virtual bool IsHomeTheCurrentPage { get; }
 
         public virtual void Dispose()
         {
