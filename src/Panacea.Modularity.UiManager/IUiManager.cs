@@ -7,8 +7,8 @@ using System.Windows;
 
 namespace Panacea.Modularity.UiManager
 {
-    public interface IUiManager
-        :INavigator, 
+    public interface IUiManager :
+        INavigator, 
         INotifier, 
         IPopupContainer,
         ICustomizable,
@@ -36,6 +36,5 @@ namespace Panacea.Modularity.UiManager
 
         void Restart(string message, Exception exception = null);
 
-        Task<bool> RequestLogin(string text);
     }
 }
