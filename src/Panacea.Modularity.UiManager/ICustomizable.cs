@@ -9,15 +9,16 @@ namespace Panacea.Modularity.UiManager
 {
     public interface ICustomizable
     {
-        object AddToolButton(string text, string namesp, string iconUrl, Action action);
+        void AddMainPageControl(FrameworkElement c);
 
-        void RemoveToolButton(object button);
-        /// <summary>
-        ///     Sets a UIElement to be displayed in the NavigationBar on the main menu <b>only</b>.
-        /// </summary>
-        /// <param name="c"></param>
-        void SetNavigationBarControl(FrameworkElement c);
+        void RemoveMainPageControl(FrameworkElement c);
+
+        void AddNavigationBarControl(FrameworkElement c);
 
         void RemoveNavigationBarControl(FrameworkElement c);
+
+        void AddSettingsControl(FrameworkElement c);
+
+        void RemoveSettingsControl(FrameworkElement c);
     }
 }
