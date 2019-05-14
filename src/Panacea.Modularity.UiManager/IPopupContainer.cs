@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Panacea.Core.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,16 @@ namespace Panacea.Modularity.UiManager
 {
     public interface IPopupContainer
     {
-        IPopup ShowPopup(
-            FrameworkElement element,
+        void ShowPopup(
+            ViewModelBase element,
             string title = null,
             PopupType popupType = PopupType.None,
             bool closable = true,
             bool trasnparent = true);
 
-        void HidePopup(IPopup element);
-        void HidePopup(object element);
+        void HidePopup(ViewModelBase element);
         void HideAllPopups();
     }
+
+    
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Panacea.Core.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,19 +16,19 @@ namespace Panacea.Modularity.UiManager
         /// <param name="message">The message to be shown.</param>
         /// <param name="del">A callback to be called when the user clicks this notification</param>
         /// <returns></returns>
-        FrameworkElement Notify(string message, Action del);
+        void Notify(string message, Action del);
 
         /// <summary>
         ///     Show a notification.
         /// </summary>
         /// <param name="c">A custom control to be displayed.</param>
-        void Notify(FrameworkElement c);
+        void Notify(ViewModelBase c);
 
         /// <summary>
         ///     Remove a notification.
         /// </summary>
         /// <param name="c"></param>
-        void Refrain(FrameworkElement c);
+        void Refrain(ViewModelBase c);
 
         /// <summary>
         ///     Show the notifications popup.

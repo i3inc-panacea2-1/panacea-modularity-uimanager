@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Panacea.Core.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,16 @@ namespace Panacea.Modularity.UiManager
 {
     public interface ICustomizable
     {
-        void AddMainPageControl(FrameworkElement c);
+        void AddMainPageControl(ViewModelBase c);
 
-        void RemoveMainPageControl(FrameworkElement c);
+        void RemoveMainPageControl(ViewModelBase c);
 
-        void AddNavigationBarControl(FrameworkElement c);
+        void AddNavigationBarControl(ViewModelBase c);
 
-        void RemoveNavigationBarControl(FrameworkElement c);
+        void RemoveNavigationBarControl(ViewModelBase c);
 
-        void AddSettingsControl(FrameworkElement c);
+        void AddSettingsControl(ViewModelBase c);
 
-        void RemoveSettingsControl(FrameworkElement c);
+        void RemoveSettingsControl(ViewModelBase c);
     }
 }
