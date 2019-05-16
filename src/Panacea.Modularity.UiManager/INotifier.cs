@@ -1,10 +1,6 @@
-﻿using Panacea.Core.Mvvm;
+﻿using Panacea.Mvvm;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+
 
 namespace Panacea.Modularity.UiManager
 {

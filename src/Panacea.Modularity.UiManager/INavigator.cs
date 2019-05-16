@@ -1,7 +1,6 @@
-﻿using Panacea.Core.Mvvm;
+﻿using Panacea.Mvvm;
 using System;
 using System.Collections.Generic;
-
 
 namespace Panacea.Modularity.UiManager
 {
