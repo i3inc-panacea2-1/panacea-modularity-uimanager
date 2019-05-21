@@ -53,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeforeNavigateEventArgs.cs" />
-    <Compile Include="Extensions\PanaceaServicesExtensions.cs" />
     <Compile Include="ICallablePlugin.cs" />
     <Compile Include="ICustomizable.cs" />
     <Compile Include="IKeyboardHandler.cs" />
@@ -66,6 +65,7 @@
     <Compile Include="IUiManagerProvider.cs" />
     <Compile Include="KeyboardTypes.cs" />
     <Compile Include="LiveTileFrame.cs" />
+    <Compile Include="PanaceaServicesExtensions.cs" />
     <Compile Include="PopupType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
