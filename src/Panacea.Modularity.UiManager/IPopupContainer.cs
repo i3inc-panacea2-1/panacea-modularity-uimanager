@@ -1,11 +1,12 @@
 ﻿using Panacea.Mvvm;
+using System.Threading.Tasks;
 
 namespace Panacea.Modularity.UiManager
 {
     public interface IPopupContainer
     {
-        void ShowPopup(
-            ViewModelBase element,
+        Task<TResult> ShowPopup<TResult>(
+            PopupViewModelBase<TResult> element,
             string title = null,
             PopupType popupType = PopupType.None,
             bool closable = true,
