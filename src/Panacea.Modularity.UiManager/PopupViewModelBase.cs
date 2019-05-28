@@ -19,5 +19,15 @@ namespace Panacea.Modularity.UiManager
         {
             return taskCompletionSource.Task;
         }
+
+        protected void SetResult(TResult result)
+        {
+            taskCompletionSource.SetResult(result);
+        }
+
+        protected virtual void Close()
+        {
+            SetResult(default(TResult));
+        }
     }
 }
