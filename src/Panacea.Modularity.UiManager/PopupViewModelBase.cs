@@ -25,7 +25,7 @@ namespace Panacea.Modularity.UiManager
             taskCompletionSource.SetResult(result);
         }
 
-        protected virtual void Close()
+        public virtual void Close()
         {
             SetResult(default(TResult));
         }
