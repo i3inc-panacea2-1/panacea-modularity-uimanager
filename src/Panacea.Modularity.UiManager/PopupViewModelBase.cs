@@ -29,5 +29,16 @@ namespace Panacea.Modularity.UiManager
         {
             SetResult(default(TResult));
         }
+
+        private bool _closable;
+        public virtual bool Closable
+        {
+            get => _closable;
+            set
+            {
+                _closable = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }
