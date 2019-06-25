@@ -61,6 +61,7 @@
     <Compile Include="PopupType.cs" />
     <Compile Include="PopupViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsControlViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
