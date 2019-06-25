@@ -12,8 +12,8 @@ namespace Panacea.Modularity.UiManager
 
         void RemoveNavigationBarControl(ViewModelBase c);
 
-        void AddSettingsControl(ViewModelBase c);
+        void AddSettingsControl(SettingsControlViewModelBase c);
 
-        void RemoveSettingsControl(ViewModelBase c);
+        void RemoveSettingsControl(SettingsControlViewModelBase c);
     }
 }
