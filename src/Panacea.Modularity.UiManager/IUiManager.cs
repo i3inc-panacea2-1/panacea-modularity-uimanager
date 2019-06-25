@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Panacea.Modularity.UiManager
 {
@@ -31,6 +32,10 @@ namespace Panacea.Modularity.UiManager
         Task<TResult> DoWhileBusy<TResult>(Func<Task<TResult>> action);
 
         void Restart(string message, Exception exception = null);
+
+        event KeyEventHandler PreviewKeyDown;
+
+        event KeyEventHandler PreviewKeyUp;
 
     }
 }
